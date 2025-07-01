@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slider .slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: slide 20s infinite ease-in-out;
+}
+
+.slider .slide:nth-child(1){
+    animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2){
+    animation-delay: 4s;
+}
+
+.slider .slide:nth-child(3){
+    animation-delay: 8s;
+}
+
+.slider .slide:nth-child(4){
+    animation-delay: 12s;
+}
+
+.slider .slide:nth-child(5){
+    animation-delay: 16s;
+}
+
+.slider .slide img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.slider .slide .content{
+    position: absolute;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    top: 0;
+    height: 100%;
+    width: 100em;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgba(0, 0, 0, 0.526), rgba(0, 0, 0, 0));
+    padding: 3em;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: curs;
+    src: url('MrDafoe-Regular.ttf');
+}
+
+.slider .slide .content h3{
+    padding-top: 10%;
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+    padding-left: 0.3em;
+}
+
+.slider .slide .content h2{
+    padding-left: 0.3em;
+    font-weight: 100;
+    font-family: curs;
+    font-size: 10em;
+}
+
+.slider .slide .content p{
+    max-width: 30em;
+    padding-left: 0.3em;
+}
+
+@keyframes slide {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    2%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    18%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    40%, 80%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
